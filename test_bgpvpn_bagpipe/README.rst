@@ -21,9 +21,12 @@ Install bagpipe by cloning and installing it :
 https://github.com/Orange-OpenSource/bagpipe-bgp
 
 create a br-mpls bridge
-modify the following default parameters in bgp.conf :
+modify the following default parameters in /etc/bagpipe/bgp.conf :
 
 | local_address=YOUR_IP
+
+In the [DATAPLANE_DRIVER_IPVPN] section:
+
 | dataplane_driver=mpls_ovs_dataplane.MPLSOVSDataplaneDriver
 | ovs_bridge=br-mpls
 
